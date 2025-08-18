@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+/* src/App.css - global site styles for landing page */
+/* Basic reset + sensible defaults */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; padding: 0; }
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #0f1724;
+  background: #ffffff;
+  line-height: 1.45;
+  -webkit-font-feature-settings: "kern";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Container used by components */
+.container-outer {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Utility spacing */
+.section {
+  padding: 48px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Typography helpers */
+h1, h2, h3, h4 { margin: 0; font-weight: 700; color: #0f1724; }
+p { margin: 0; color: #333; }
+
+/* Primary button used across the site */
+.btn-primary,
+button.btn-primary,
+.button-primary {
+  display: inline-block;
+  background: #0f79ff;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .12s ease, background .12s ease;
+}
+.btn-primary:hover { transform: translateY(-2px); background: #0d6ee6; }
+.btn-primary:active { transform: translateY(0); background: #0b5dc7; }
+.btn-primary:focus { outline: 3px solid rgba(15,121,255,0.22); outline-offset: 3px; }
+
+/* Secondary / outline button */
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: #0f79ff;
+  border: 2px solid #bfe0ff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .12s ease, color .12s ease;
+}
+.btn-outline:hover { background: #0f79ff; color: white; }
+
+/* Small helpers for text */
+.lead { font-size: 1.02rem; color: #374151; }
+.kicker { font-weight: 600; color: #0f79ff; }
+
+/* Header / top nav (simple, like your screenshot) */
+.site-header {
+  height: 66px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid rgba(15,23,36,0.06);
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+.site-header .container-outer {
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Logo area */
+.site-logo { display:flex; align-items:center; gap:10px; font-weight:700; color:#0f79ff; text-decoration:none; }
+.site-logo img { height:30px; width:auto; display:block; }
+
+/* Nav links */
+.site-nav { display:flex; gap:18px; align-items:center; }
+.site-nav a { color: #374151; text-decoration: none; font-weight:600; font-size:0.95rem; padding:8px 6px; }
+
+/* Right side login button */
+.site-actions { display:flex; gap:12px; align-items:center; }
+
+/* Simple responsive behavior for header */
+@media (max-width: 840px) {
+  .site-nav { display:none; } /* hide nav for small screens (you can convert to hamburger) */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Cards, panels */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(13,36,92,0.06);
+  padding: 16px;
+}
+
+/* Small rounded pill (used for tags) */
+.pill {
+  display:inline-block;
+  padding: 6px 10px;
+  background: #eef6ff;
+  color: #0d57b8;
+  border-radius: 999px;
+  font-weight:600;
+  font-size: 0.9rem;
+}
+
+/* Utility: center horizontally */
+.center { display:flex; justify-content:center; align-items:center; }
+
+/* Small screen tweaks */
+@media (max-width: 980px) {
+  .container-outer { padding: 0 16px; }
+  .section { padding: 32px 0; }
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary, .btn-outline { transition: none; }
+  * { transition-duration: 0s !important; animation-duration: 0s !important; }
 }

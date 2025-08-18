@@ -1,0 +1,96 @@
+.carousel-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 🔹 Button (auto scales with clamp) */
+.carousel-image .explore-btn {
+  position: absolute;
+  bottom: 22%;
+  left: 7%;
+  background: transparent;
+  color: #0b79ff;
+  border: 2px solid #499bff;
+  padding: clamp(4px, 0.8vw, 10px) clamp(10px, 1.8vw, 20px);
+  border-radius: 8px;
+  font-size: clamp(10px, 1vw, 15px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.carousel-image .explore-btn:hover {
+  transform: translateY(-3px);
+  background: #0b79ff;
+  color: #fff;
+}
+
+/* Dots */
+.carousel-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #0b79ff;
+}
+
+/* 🔹 Responsive Tweaks */
+@media (max-width: 768px) {
+  .carousel-image .explore-btn {
+    bottom: 14%;
+    left: 5%;
+    font-size: clamp(9px, 2.5vw, 12px);
+    padding: 5px 12px;
+    border-width: 1.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-image .explore-btn {
+    bottom: 16%;
+    left: 4%;
+    font-size: clamp(8px, 2.8vw, 11px);
+    padding: 4px 10px;
+    border-width: 1px;
+  }
+}
+/* 🔹 Special style ONLY for Slide 4 button */
+.slide-4 + .explore-btn {
+  color: white;      
+  border-color: white; 
+}
+
