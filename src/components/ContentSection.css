@@ -1,0 +1,61 @@
+.content-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.content-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.content-card:hover {
+  background: #248FEF7D;   /* ✅ hover for desktops */
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.content-card.active {     /* ✅ stays blue after tap */
+  background: #248FEF7D;
+  color: #fff;
+}
+
+.content-card .icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.content-card h3 {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.content-card p {
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  color: inherit;
+}
