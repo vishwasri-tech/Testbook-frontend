@@ -1,0 +1,145 @@
+.test-series-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.test-series-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-left: 8.6%;
+}
+
+.test-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:50px;
+}
+
+.test-card {
+  background-color: white;
+  border: 2px solid #caa2ff;
+  border-radius: 10px;
+  width: 220px;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.test-card:hover {
+  transform: translateY(-5px);
+}
+
+.test-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.test-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.test-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.test-card p {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.test-card ul {
+  padding-left: 20px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.test-card li {
+  margin-bottom: 6px;
+}
+
+.test-card-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.take-test-btn {
+  background-color: #f1e3ff;
+  color: #a855f7;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.take-test-btn:hover {
+  background-color: #e0c8ff;
+}
+
+.explore-btn-container {
+  margin-top: 30px;
+}
+
+.explore-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: white;
+  border: 1px solid #90caff;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #e5f3ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .test-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .test-card {
+    width: 90%;
+  }
+}
+@media (width:912px){
+    .test-series-title{
+        margin-left:17%;
+    }
+}
+@media (width:820px){
+ .test-series-title{
+    margin-left:12.5%;
+ }
+}
+@media (width:1024px){
+    .test-series-title{
+        margin-left:15%;
+    }
+}
+@media (min-width:853px){
+    .test-series-title{
+        margin-left:13%;
+    }
+}
+@media (width:1280px){
+    .test-series-title{
+        margin-left:3%;
+    }
+}
