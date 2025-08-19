@@ -99,7 +99,9 @@
   align-items: center;
   gap: 1.2rem;
   flex-wrap: wrap;
+  margin-right: 3rem; /* 👈 pushes it left a bit */
 }
+
 
 .footer-legal p {
   margin: 0;

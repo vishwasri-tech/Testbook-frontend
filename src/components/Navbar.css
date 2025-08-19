@@ -60,6 +60,11 @@
   font-weight: 500;
   font-size: 16px;
 }
+.nav-link.active-link {
+  color: #3498db;  
+  font-weight: 600;
+  text-decoration: underline;
+}
 
 /* Login Button */
 .login-btn {
