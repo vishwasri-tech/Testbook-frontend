@@ -1,0 +1,68 @@
+.about-section {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay for text readability */
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  max-width: 900px;
+  margin: 0 1rem;
+}
+
+.about-card h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about-card h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #ddd;
+  margin-bottom: 1.5rem;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-card h1 {
+    font-size: 2rem;
+  }
+
+  .about-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .about-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-card h2 {
+    font-size: 1rem;
+  }
+
+  .about-card p {
+    font-size: 0.9rem;
+  }
+}
