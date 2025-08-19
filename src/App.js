@@ -12,6 +12,7 @@ import TestSeries from "./components/TestSeries";
 import ContentSection from "./components/ContentSection";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
+import Exams from "./components/Exams";
 
 
 function App() {
@@ -37,8 +38,8 @@ function App() {
           />
 
          
-          {/* <Route path="/exams" element={<Exams/>} />
-          <Route path="/test-series" element={<TestSeries/>} /> */}
+           <Route path="/exams" element={<Exams/>} />
+          {/* <Route path="/test-series" element={<TestSeries/>} />  */}
           <Route path="/about" element={<AboutUs/>} />
           {/* <Route path="/contact" element={<Contact Us/>} /> */}
           <Route
