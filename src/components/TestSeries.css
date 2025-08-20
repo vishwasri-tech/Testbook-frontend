@@ -52,7 +52,7 @@
 }
 
 .test-card p {
-  font-size: 14px;
+  font-size: 15px;
   margin: 8px 0;
 }
 
@@ -60,7 +60,9 @@
   padding-left: 20px;
   font-size: 14px;
   margin: 10px 0;
+  line-height: 1.9;   /* increases vertical spacing between lines */
 }
+
 
 .test-card li {
   margin-bottom: 6px;

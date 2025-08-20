@@ -131,3 +131,95 @@
   line-height: 1.4;
 }
 
+/* Container background */
+.expert-content {
+  flex: 1;
+  background-color: #f0f6ff; /* light blue bg (same as screenshot) */
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0px; /* optional: for softer edges */
+}
+
+/* Heading */
+.expert-content h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Sub heading / description under title */
+.expert-content p {
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  margin: 0.8rem 0 1.5rem;
+  color: #333;
+}
+
+/* List items */
+.expert-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expert-content li {
+  margin-bottom: 1.2rem;
+}
+
+.li-heading {
+  font-size: clamp(0.95rem, 1.1vw, 1rem);
+  font-weight: 350;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.li-description {
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  margin-left: 1.8rem; /* aligns nicely under heading */
+  margin-top: 0.3rem;
+  line-height: 1.4;
+  color: #444;
+}
+
+/* ✅ Tags like in screenshot (Supportive, Expert Faculty, etc.) */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.5rem 0;
+}
+
+.tags span {
+  background: #f0f6ff; 
+  color: #000000;      /* black text */
+  padding: 0.4rem 0.9rem;
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: none; /* ✅ removes border */
+  box-shadow: none; /* extra safe */
+  transform: translateY(-25px)
+}
+
+/* Button */
+.mentor-btn {
+  padding: 0.6rem 1.0rem;
+  border: 2px solid #1356ae;
+  color: #1a73e8;
+  background: white;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+  transition: 0.3s;
+  transform: translateY(-30px); 
+}
+
+.mentor-btn:hover {
+  background: #1a73e8;
+  color: white;
+}
