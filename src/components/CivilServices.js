@@ -14,7 +14,7 @@ const slides = [
   { id: 2, btn: "Explore State Services", img: slide2 },
   { id: 3, btn: "Explore Banking", img: slide3 },
   { id: 4, btn: "Explore Railways", img: slide4 },
-  { id: 5, btn: "Explore Teaching", img: slide5 },
+  { id: 5, btn: "Explore SSC", img: slide5 },
 ];
 
 const CivilServices = () => {
