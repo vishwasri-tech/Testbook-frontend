@@ -9,7 +9,7 @@ import banking from "./assets/banking.png";
 import ssc from "./assets/ssc.png";
 
 import arrow from "./assets/arrow.png";
-import AP from "./assets/AP.png"; // Andhra Pradesh icon
+import AP from "./assets/AP.png"; 
 
 const Exams = () => {
   const [selected, setSelected] = useState("Civil Service Exams");
