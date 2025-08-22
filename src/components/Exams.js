@@ -1,6 +1,6 @@
+
 // import React, { useState } from "react";
 // import "./Exams.css";
-
 
 // import civil from "./assets/civil.png";
 // import state from "./assets/state.png";
@@ -9,7 +9,11 @@
 // import ssc from "./assets/ssc.png";
 
 // import arrow from "./assets/arrow.png";
-// import AP from "./assets/AP.png"; 
+// import AP from "./assets/AP.png";
+// import boyImage from "./assets/boy-img.png";
+
+
+
 
 // const Exams = () => {
 //   const [selected, setSelected] = useState("Civil Service Exams");
@@ -27,18 +31,27 @@
 //       { id: "UPSC CSE", desc: "Union Public Service Commission Civil Services Exam", icon: civil },
 //       { id: "CAPF", desc: "Central Armed Police Forces", icon: civil },
 //     ],
-//     "State Service Exams": [ { id: "TSPSC", desc: "Telangana State Public Service Commission ", icon: state },
-//       { id: "APPSC", desc: "Andhra Pradesh Public Service Commission", icon: AP },],
-//     "Railway Exams": [ { id: "RRB NTPC", desc: "Non-Technical Popular Categories", icon: railway },
-//       { id: "RRB Group D", desc: "Group D Recruitment Exam", icon: railway },],
-//     "Banking Exams": [ { id: "IBPS PO", desc: "Probationary Officer Exam", icon: banking },
-//       { id: "SBI Clerk", desc: "Junior Associate (Clerical Cadre)", icon: banking },],
-//     "Ssc Exams": [ { id: "SSC CGL", desc: " Combined Graduate Level", icon: ssc },
-//       { id: "SSC CHSL", desc: "Combined Higher Secondary Level", icon: ssc },],
+//     "State Service Exams": [
+//       { id: "TSPSC", desc: "Telangana State Public Service Commission ", icon: state },
+//       { id: "APPSC", desc: "Andhra Pradesh Public Service Commission", icon: AP },
+//     ],
+//     "Railway Exams": [
+//       { id: "RRB NTPC", desc: "Non-Technical Popular Categories", icon: railway },
+//       { id: "RRB Group D", desc: "Group D Recruitment Exam", icon: railway },
+//     ],
+//     "Banking Exams": [
+//       { id: "IBPS PO", desc: "Probationary Officer Exam", icon: banking },
+//       { id: "SBI Clerk", desc: "Junior Associate (Clerical Cadre)", icon: banking },
+//     ],
+//     "Ssc Exams": [
+//       { id: "SSC CGL", desc: " Combined Graduate Level", icon: ssc },
+//       { id: "SSC CHSL", desc: "Combined Higher Secondary Level", icon: ssc },
+//     ],
 //   };
 
 //   return (
 //     <div className="exam-container">
+//       {/* ---------------- Choose Exam Section ---------------- */}
 //       <h2>Choose Your Exam. Start Your Journey.</h2>
 //       <p>
 //         Explore all major competitive exams and get structured preparation
@@ -77,6 +90,60 @@
 //           )}
 //         </div>
 //       </div>
+
+//       {/* ---------------- About Section ---------------- */}
+    
+//       <div className="about-section">
+//   <h2>About the Exams</h2>
+//   <p>
+//     Our platform brings all major competitive exams under one roof. Each category is carefully
+//     structured to provide the latest exam patterns, syllabus-based questions, and
+//     expert-designed test series. Whether you’re preparing for Civil Services to serve the
+//     nation, aiming for State Services, or targeting jobs in Railways, Banking, or SSC, we
+//     ensure that your preparation is effective, smart, and result-driven.
+//   </p>
+
+//   <ul className="about-list">
+//     <li>
+//       <span className="about-icon">📖</span>
+//       <span><strong>Updated Syllabus Coverage</strong> – Always aligned with the latest exam patterns.</span>
+//     </li>
+//     <li>
+//       <span className="about-icon">📝</span>
+//       <span><strong>Mock Tests & Previous Papers</strong> – Practice like real exams.</span>
+//     </li>
+//     <li>
+//       <span className="about-icon">📊</span>
+//       <span><strong>Performance Analysis</strong> – Track strengths and weak areas.</span>
+//     </li>
+//     <li>
+//       <span className="about-icon">🎯</span>
+//       <span><strong>Exam-Wise Guidance</strong> – Tailored strategies for each category.</span>
+//     </li>
+//   </ul>
+// </div>
+
+
+//       {/* ---------------- Next Step Section ---------------- */}
+  
+
+//           <div className="next-step-section">
+//         <h2>Take the Next Step</h2>
+//         <h3>
+//           Pick your exam, practice with expert tests, and achieve your dream career.
+//         </h3>
+//         <p>
+//           Success in competitive exams doesn’t come from luck, it comes from practice. 
+//           Let’s begin today.
+//         </p>
+//         <button className="start-btn">Start Preparation</button>
+//       </div>
+
+//       {/* Right Image */}
+//       <div className="next-step-image">
+//         <img src={boyImage} alt="Student holding laptop" />
+//       </div>
+    
 //     </div>
 //   );
 // };
@@ -88,6 +155,12 @@
 
 
 
+
+
+
+
+
+// Exams.jsx
 import React, { useState } from "react";
 import "./Exams.css";
 
@@ -99,12 +172,7 @@ import ssc from "./assets/ssc.png";
 
 import arrow from "./assets/arrow.png";
 import AP from "./assets/AP.png";
-
-// About Section icons
-// import syllabus from "./assets/syllabus.png";
-// import mock from "./assets/mock.png";
-// import performance from "./assets/performance.png";
-// import guidance from "./assets/guidance.png";
+import boyImage from "./assets/boy-img.png";
 
 const Exams = () => {
   const [selected, setSelected] = useState("Civil Service Exams");
@@ -195,39 +263,49 @@ const Exams = () => {
 
         <ul className="about-list">
           <li>
-            {/* <img src={syllabus} alt="Syllabus" className="about-icon" /> */}
-            <strong>Updated Syllabus Coverage</strong> – Always aligned with the latest exam patterns.
+            <span className="about-icon">📖</span>
+            <span><strong>Updated Syllabus Coverage</strong> – Always aligned with the latest exam patterns.</span>
           </li>
           <li>
-            {/* <img src={mock} alt="Mock Tests" className="about-icon" /> */}
-            <strong>Mock Tests & Previous Papers</strong> – Practice like real exams.
+            <span className="about-icon">📝</span>
+            <span><strong>Mock Tests & Previous Papers</strong> – Practice like real exams.</span>
           </li>
           <li>
-            {/* <img src={performance} alt="Performance" className="about-icon" /> */}
-            <strong>Performance Analysis</strong> – Track strengths and weak areas.
+            <span className="about-icon">📊</span>
+            <span><strong>Performance Analysis</strong> – Track strengths and weak areas.</span>
           </li>
           <li>
-            {/* <img src={guidance} alt="Guidance" className="about-icon" /> */}
-            <strong>Exam-Wise Guidance</strong> – Tailored strategies for each category.
+            <span className="about-icon">🎯</span>
+            <span><strong>Exam-Wise Guidance</strong> – Tailored strategies for each category.</span>
           </li>
         </ul>
       </div>
 
       {/* ---------------- Next Step Section ---------------- */}
-      <div className="next-step-section">
-        <h2>Take the Next Step</h2>
-        <h3>Pick your exam, practice with expert tests, and achieve your dream career.</h3>
-        <p>
-          Success in competitive exams doesn’t come from luck, it comes from practice.
-          Let’s begin today.
-        </p>
-        <button className="start-btn">Start Preparation</button>
+      <div className="next-step-wrapper">
+        <div className="next-step-section">
+          <h2>Take the Next Step</h2>
+          <h3>
+            Pick your exam, practice with expert tests, and achieve your dream career.
+          </h3>
+          <p>
+            Success in competitive exams doesn’t come from luck, it comes from practice. 
+            Let’s begin today.
+          </p>
+          <button className="start-btn">Start Preparation</button>
+        </div>
+
+        {/* Right Image */}
+        <div className="next-step-image">
+          <img src={boyImage} alt="Student holding laptop" />
+        </div>
       </div>
     </div>
   );
 };
 
 export default Exams;
+
 
 
 

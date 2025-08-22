@@ -1,7 +1,13 @@
 import React from 'react';
 import './TestSeries.css';
+import { useNavigate } from "react-router-dom";
 
 function TestCard({ data }) {
+    const navigate = useNavigate();
+     const handleTakeTest = () => {
+      
+    navigate('/signup'); // navigate to signup page
+  };
   return (
     <div className="test-card">
       <div className="test-card-header">
@@ -21,10 +27,12 @@ function TestCard({ data }) {
       </div>
 
       <div className="test-card-btn-container">
-        <button className="take-test-btn">Take This Test →</button>
+        <button className="take-test-btn"  onClick={handleTakeTest}>Take This Test →</button>
       </div>
     </div>
   );
 }
 
 export default TestCard;
+
+
