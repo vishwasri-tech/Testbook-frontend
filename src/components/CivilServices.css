@@ -30,8 +30,8 @@
   bottom: 22%;
   left: 7%;
   background: transparent;
-  color: #0b79ff;
-  border: 2px solid #499bff;
+  color: #1EC437;
+  border: 2px solid #1EC437;
   padding: clamp(4px, 0.8vw, 10px) clamp(10px, 1.8vw, 20px);
   border-radius: 8px;
   font-size: clamp(10px, 1vw, 15px);
@@ -43,7 +43,7 @@
 
 .carousel-image .explore-btn:hover {
   transform: translateY(-3px);
-  background: #0b79ff;
+  background: #1EC437;
   color: #fff;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .dot.active {
-  background-color: #0b79ff;
+  background-color: #1EC437;
 }
 
 /* 🔹 Responsive Tweaks */

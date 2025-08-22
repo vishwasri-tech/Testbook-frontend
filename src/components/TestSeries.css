@@ -20,7 +20,7 @@
 
 .test-card {
   background-color: white;
-  border: 2px solid #caa2ff;
+  border: 2px solid #1EC437;
   border-radius: 10px;
   width: 220px;
   padding: 15px;
@@ -75,8 +75,8 @@
 }
 
 .take-test-btn {
-  background-color: #f1e3ff;
-  color: #a855f7;
+  background-color: #1EC43742;
+  color: #1EC437;
   border: none;
   padding: 8px 14px;
   border-radius: 6px;
@@ -98,8 +98,8 @@
   padding: 10px 20px;
   border-radius: 6px;
   background: white;
-  border: 1px solid #90caff;
-  color: #007bff;
+  border: 1px solid ;
+  color: #1EC437;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;

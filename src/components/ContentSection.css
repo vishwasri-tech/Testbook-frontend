@@ -34,13 +34,13 @@
 }
 
 .content-card:hover {
-  background: #248FEF7D;   /* ✅ hover for desktops */
+  background: #1EC43780;   /* ✅ hover for desktops */
   color: #fff;
   transform: translateY(-5px);
 }
 
 .content-card.active {     /* ✅ stays blue after tap */
-  background: #248FEF7D;
+  background: #1EC43780;
   color: #fff;
 }
 
