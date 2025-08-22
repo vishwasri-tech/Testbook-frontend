@@ -1,7 +1,3 @@
-
-
-
-
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -13,7 +9,7 @@ import ContentSection from "./components/ContentSection";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import Exams from "./components/Exams";
-
+// import PracticeSection from "./components/PracticeSection"; // 👈 new import
 
 function App() {
   return (
@@ -30,6 +26,7 @@ function App() {
                 <HeroSection />
                 <CivilServices />
                 <TestSeries />
+                {/* <PracticeSection /> 👈 Added here */}
                 <ExpertGuidance />
                 <ContentSection />
                 <Footer />
@@ -37,14 +34,15 @@ function App() {
             }
           />
 
-         
-           <Route path="/exams" element={<Exams/>} />
-          {/* <Route path="/test-series" element={<TestSeries/>} />  */}
-          <Route path="/about" element={<AboutUs/>} />
-          {/* <Route path="/contact" element={<Contact Us/>} /> */}
+          <Route path="/exams" element={<Exams />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route
             path="/login"
-            element={<h2 style={{ textAlign: "center", marginTop: "150px" }}>Login Page</h2>}
+            element={
+              <h2 style={{ textAlign: "center", marginTop: "150px" }}>
+                Login Page
+              </h2>
+            }
           />
         </Routes>
       </div>

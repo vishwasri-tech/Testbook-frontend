@@ -1,146 +1,194 @@
-.about-us-container {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Base Styles */
+.about-container {
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  line-height: 1.5;
 }
 
 /* Hero Section */
-.hero-section {
-  height: 100vh;
+.hero {
   background-size: cover;
   background-position: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.55);
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-text {
-  text-align: center;
-  max-width: 900px;
   color: #fff;
+  text-align: center;
 }
 
-.hero-text h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero-text .subheading {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #dcdcdc;
-}
-
-.hero-text .description {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #f0f0f0;
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 12% 22%;
   max-width: 900px;
-  margin: 0 auto;
+  margin: auto;
+
 }
 
-/* How We Started Section */
-.how-we-started {
-  padding: 60px 20px;
-  max-width: 1200px;
+.hero h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+}
+
+/* How We Started */
+.how-started {
+  padding: 50px 5%;
+  background: #fff;
+  text-align: left;
+}
+
+.how-started h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.how-started .subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.started-content {
+  max-width: 2500px;
   margin: auto;
 }
 
-.text-section {
-  text-align: left;
-  margin-bottom: 50px;
-}
-
-.text-section h2 {
-  font-size: 2rem;
+.started-content p {
   margin-bottom: 10px;
-  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
-.text-section .subtitle {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 10px;
-}
-
-.text-section .about-description {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1;
-  margin-bottom: 15px;
-}
-
-/* Card Section */
-.card-section {
+/* Cards */
+.cards {
   display: flex;
-  gap: 40px;
-  justify-content: center;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  padding: 30px 20px;
-  flex: 1 1 300px;
-  max-width: 250px;
-  transition: transform 0.3s ease;
+  background: #f9f9f9;
+  width: 280px;
+  padding: 25px 20px;
   text-align: center;
-}
-
-.card:hover {
-  transform: translateY(-5px);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .card img {
-  height:100px;
+  width: 100px;
   margin-bottom: 15px;
 }
 
 .card h3 {
-  font-size: 1.2rem;
+  font-size: 20px;
   margin-bottom: 10px;
-  color: #222;
 }
 
-.card p {
-  font-size: 0.95rem;
+/* Why Choose Us */
+.why-choose {
+  background: #f4f7fd;
+  padding: 60px 5%;
+}
+
+.why-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.why-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.why-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.why-text .subtitle {
+  font-size: 16px;
+  margin-bottom: 20px;
   color: #555;
-  line-height: 1.5;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 2rem;
+.benefits {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.benefits li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.why-image {
+  flex: 1;
+  text-align: center;
+}
+
+.why-image img {
+  max-width: 100%;
+  padding-right: 00px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-overlay {
+    padding: 15% 8%;
   }
 
-  .hero-text .subheading,
-  .hero-text .description {
-    font-size: 1rem;
-  }
-
-  .text-section {
+  .why-container {
+    flex-direction: column-reverse;
     text-align: center;
   }
 
-  .card-section {
-    flex-direction: column;
-    align-items: center;
+  .started-content {
+    text-align: center;
+  }
+
+  .benefits {
+    text-align: left;
+    display: inline-block;
   }
 
   .card {
-    max-width: 100%;
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-overlay {
+    padding: 18% 10%;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .card img {
+    width: 60px;
+  }
+
+  .why-choose {
+    padding: 40px 20px;
+  }
+
+  .how-started {
+    padding: 40px 20px;
   }
 }
