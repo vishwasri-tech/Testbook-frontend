@@ -1,121 +1,105 @@
+/* ========== Home Container ========== */
+.home-container {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px;
+  color: #333;
+  overflow-x: hidden;
+}
 
-
-
-
-
-
+/* ========== Exam Container ========== */
 .exam-container {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
 
 .exam-container h2 {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 6px;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
 }
 
 .exam-container p {
-  color: #666;
-  margin-bottom: 20px;
+  font-size: 1.3rem;
+  margin-bottom: 40px;
 }
 
-/* ---------------- Exam Box ---------------- */
 .exam-box {
   display: flex;
+  flex-wrap: wrap;
+  padding-left: 10px;
   gap: 20px;
-  background: #fff;
 }
 
-/* Left Column */
+/* ========== Exam Categories ========== */
 .exam-categories {
-  flex: 1;
   list-style: none;
-  border-right: 2px solid #eee;
   padding: 0;
   margin: 0;
+  flex: 1;
+  min-width: 100px;
+  max-width: 8000px;
 }
 
 .exam-categories li {
+  padding: 20px 15px;
+  cursor: pointer;
+  border: 1px solid #ddddddbe;
+  margin-bottom: 10px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px;
-  cursor: pointer;
-  font-weight: 400;
+  gap: 20px;
   transition: 0.3s;
 }
 
+.exam-categories li.active,
 .exam-categories li:hover {
-  background: #f9f9f9;
-}
-
-.exam-categories li.active {
-  font-weight: 700;
-  color: #000;
+  background-color: #f0f8ff;
+  /* border-color: #4a90e2; */
 }
 
 .cat-icon {
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
 }
 
-/* Right Column */
+/* ========== Subcategories ========== */
 .exam-subcategories {
   flex: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding-left: 20px;
+  min-width: 300px;
 }
 
 .subexam {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 15px;
-  position: relative;
-  padding-right: 40px;
-}
-
-.subexam strong {
-  color: #000;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
 }
 
 .sub-icon {
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
 }
 
 .arrow-icon {
-  width: 8px;
+  margin-left: auto;
+  width: 12px;
   height: 15px;
-  position: absolute;
-  right: 10px;
 }
 
-.placeholder {
-  color: #777;
-}
-
-/* ---------------- About Section ---------------- */
+/* ========== About Section ========== */
 .about-section {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .about-section h2 {
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #000;
+ 
 }
-
 .about-section p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 25px;
-  color: #444;
+line-height: 45px;
+font-size: 1.2rem;
 }
 
 .about-list {
@@ -127,86 +111,126 @@
 .about-list li {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
-  font-size: 15px;
-  line-height: 1.5;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 .about-icon {
-  font-size: 20px;
-  flex-shrink: 0;
+  font-size: 1.5rem;
+}
+
+/* ========== Banner Section ========== */
+.banner-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 40px;
+  color: #fff;
+  width:100%;
+  margin-left: -40px;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  margin-top: 60px;
 }
 
-/* ✅ Responsive tweak for About */
-@media (max-width: 600px) {
-  .about-list li {
-    align-items: flex-start;
-  }
-  .about-icon {
-    margin-top: 2px;
-  }
+.banner-text {
+  flex:1;
+  min-width: 100px;
+  max-width: 500px;
+  color:black;
+ 
 }
 
+.banner-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
-
-
-
-
+.banner-text .subtext {
+  margin-top: 10px;
+  font-size: 1rem;
+  opacity: 0.95;
+}
 
 .start-btn {
+  margin-top: 20px;
   padding: 12px 24px;
-  font-size: 0.95rem;
-  border: 1px solid #007bff;
-  border-radius: 6px;
+  /* background-color:#1EC437; */
+;
+  border: 1px solid #1EC437;
+
+  border-radius: 5px;
+  color:#1EC437;
+;
+  font-size: 1.2rem;
   cursor: pointer;
-  background-color: transparent;
-  color: #007bff;
-  font-weight: 600;
-  transition: 0.3s ease;
+  transition: background 0.3s;
 }
 
 .start-btn:hover {
-  background-color: #007bff;
-  color: #fff;
+  background-color:#1EC437;
+;
 }
 
+.banner-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 1000px;
+  text-align: right;
+}
 
+.banner-image img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+}
 
-/* ---------------- Responsive ---------------- */
-@media (max-width: 768px) {
+/* ========== Responsive ========== */
+@media screen and (max-width: 768px) {
   .exam-box {
     flex-direction: column;
   }
 
-  .exam-categories {
-    border-right: none;
-    border-bottom: 2px solid #eee;
-    display: flex;
-    flex-wrap: wrap;
+  .banner-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
   }
 
-  .exam-categories li {
-    flex: 1 1 50%;
-    justify-content: flex-start;
+  .banner-text h2 {
+    font-size: 2rem;
   }
 
-  .exam-subcategories {
-    padding-left: 0;
-    padding-top: 15px;
+  .banner-text p,
+  .banner-text .subtext {
+    font-size: 1rem;
   }
 
- 
+  .banner-image {
+    margin-top: 30px;
+    text-align: center;
+  }
 }
 
-@media (max-width: 480px) {
-  .exam-categories li {
-    flex: 1 1 100%;
+@media screen and (max-width: 768px) {
+  .banner-container {
+    flex-direction: column;
+    padding: 40px 20px;
+    width: 100vw; /* ✅ force full screen width */
+    margin-left: calc(-50vw + 50%); /* ✅ remove inherited container padding */
+    background-size: cover; /* ✅ ensures image scales */
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+  }
+}
+@media screen and (width: 344px) {
+  .exam-categories{
+    margin-left: -35px;
   }
 
-
 }
-
