@@ -13,7 +13,10 @@ const AboutUs = () => {
       
       {/* Hero Section */}
       <section
+
         className="hero1"
+
+
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="hero-overlay">

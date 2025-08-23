@@ -6,7 +6,9 @@
 }
 
 /* Hero Section */
+
 .hero1 {
+
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -168,6 +170,30 @@
 
   .card {
     width: 90%;
+
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-overlay {
+    padding: 18% 10%;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .card img {
+    width: 60px;
+  }
+
+  .why-choose {
+    padding: 40px 20px;
+  }
+
+  .how-started {
+    padding: 40px 20px;
+
   }
 }
 
