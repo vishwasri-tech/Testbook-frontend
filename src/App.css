@@ -133,3 +133,22 @@ button.btn-primary,
   .btn-primary, .btn-outline { transition: none; }
   * { transition-duration: 0s !important; animation-duration: 0s !important; }
 }
+/* 📱 Mobile tweaks */
+@media (max-width: 768px) {
+  .practice-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .practice-text {
+    max-width: 100%;
+  }
+
+  .practice-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .practice-image {
+    margin-top: 1.5rem;
+  }
+}

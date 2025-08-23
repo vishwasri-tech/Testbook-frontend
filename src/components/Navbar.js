@@ -14,7 +14,6 @@ const Navbar = () => {
       {/* Logo */}
       <div className="nav-logo">
         <img src={logo} alt="Logo" className="logo-img" />
-        <div className="logo-text"></div>
       </div>
 
       {/* Hamburger Icon */}
@@ -25,46 +24,53 @@ const Navbar = () => {
       {/* Menu Links */}
       <ul className={isOpen ? "nav-links active" : "nav-links"}>
         <li>
-         <NavLink
-  to="/exams"
-  className={({ isActive }) =>
-    `nav-link ${isActive ? "active-link" : ""}`
-  }
-  onClick={closeMenu}
->
-  Exams
-</NavLink>
+          <NavLink
+            to="/exams"
+            className={({ isActive }) =>
+              `nav-link ${isActive ? "active-link" : ""}`
+            }
+            onClick={closeMenu}
+          >
+            Exams
+          </NavLink>
         </li>
+
         <li>
           <NavLink
-            to="/test-series"
+            to="/testseries"
             className={({ isActive }) =>
-               `nav-link ${isActive ? "active-link" : ""}`}
+              `nav-link ${isActive ? "active-link" : ""}`
+            }
             onClick={closeMenu}
           >
             Test Series
           </NavLink>
         </li>
+
         <li>
           <NavLink
             to="/about"
-            className={({ isActive }) => 
-              `nav-link ${isActive ? "active-link" : ""}`}
+            className={({ isActive }) =>
+              `nav-link ${isActive ? "active-link" : ""}`
+            }
             onClick={closeMenu}
           >
             About Us
           </NavLink>
         </li>
+
         <li>
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-               `nav-link ${isActive ? "active-link" : ""}`}
+              `nav-link ${isActive ? "active-link" : ""}`
+            }
             onClick={closeMenu}
           >
             Contact Us
           </NavLink>
         </li>
+
         <li>
           <NavLink to="/login" className="login-btn" onClick={closeMenu}>
             <FaSignInAlt style={{ marginRight: "5px" }} />
