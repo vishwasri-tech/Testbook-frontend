@@ -55,6 +55,7 @@ function AppLayout() {
               <>
                 <PracticeSection />
                 <PopularTestSeries />
+
                 <Growth />
                 <Footer />
               </>
