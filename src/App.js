@@ -11,6 +11,7 @@ import AboutUs from "./components/AboutUs";
 import Exams from "./components/Exams";
 import PracticeSection from "./components/PracticeSection";
 import PopularTestSeries from "./components/PopularTestSeries";
+import CategoriesSection from "./components/CategoriesSection"; // ✅ keep only this one
 
 import SignupScreen from "./components/SignupScreen";
 import LoginScreen from "./components/LoginScreen";
@@ -58,9 +59,13 @@ function AppLayout() {
                 <PracticeSection />
                 <PopularTestSeries />
 
+
                 <Growth />
 
                
+
+
+                <CategoriesSection />
 
                 <Footer />
               </>
