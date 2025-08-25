@@ -1,3 +1,4 @@
+/* === Growth Section Styles === */
 .growth-container {
   padding: 2rem;
   font-family: "Segoe UI", sans-serif;
@@ -25,12 +26,12 @@
 
 .growth-text-content {
   flex: 1 1 400px;
-  padding: 1rem;
+  padding: 5rem;
 }
 
 .growth-text-content h2 {
   font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .growth-text-content p {
@@ -45,12 +46,12 @@
 .growth-steps li {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-size: 1rem;
 }
 
 .growth-steps span {
-  background: #14a800;
+  background: rgba(30, 196, 55, 0.49); /* #1EC4377D */
   color: white;
   border-radius: 50%;
   width: 24px;
@@ -68,44 +69,92 @@
 
 .why-choose-section h3 {
   font-size: 1.6rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .why-choose-section p {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .features {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
+  padding: 2rem 0;
+  background: none;         /* Removed background */
+  box-shadow: none;         /* Removed outer shadow */
+  border: none;             /* Removed outer border */
 }
 
+/* Feature cards */
 .feature-card {
   background: #f9f9f9;
   border-radius: 10px;
   padding: 1rem;
   width: 230px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
   text-align: center;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.feature-card:hover {
+  background: #e0f5e9;
+  box-shadow: 0 0 15px rgba(30, 196, 55, 0.4);
 }
 
 .feature-card .icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  width: 55px;
+  height: 48px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  display: inline-block;
 }
 
 .feature-card h4 {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
-.feature-card.highlighted {
-  background: #e5fff0;
-  border: 2px solid #14a800;
+/* === Custom Cursor Styles === */
+.custom-cursor {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease, background 0.25s ease;
+  z-index: 9999;
 }
 
-/* Responsive */
+.custom-cursor.clicked {
+  transform: translate(-50%, -50%) scale(0.8);
+  background: rgba(30, 196, 55, 0.49);
+}
+
+.custom-cursor.hovering {
+  background: #1EC4377D;
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+.custom-cursor.hidden {
+  opacity: 0;
+}
+
+/* Hover highlight target */
+.hover-target:hover {
+  background-color: rgba(30, 196, 55, 0.25);
+  cursor: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+/* === Responsive Design === */
 @media (max-width: 768px) {
   .growth-section {
     flex-direction: column;
@@ -118,5 +167,9 @@
 
   .feature-card {
     width: 90%;
+  }
+
+  .custom-cursor {
+    display: none;
   }
 }
