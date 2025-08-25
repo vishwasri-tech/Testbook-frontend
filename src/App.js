@@ -15,6 +15,7 @@ import PopularTestSeries from "./components/PopularTestSeries";
 import SignupScreen from "./components/SignupScreen";
 import LoginScreen from "./components/LoginScreen";
 import ForgotScreen from "./components/ForgotScreen";
+import Growth from "./components/Growth";
 
 function AppLayout() {
   const location = useLocation();
@@ -54,6 +55,7 @@ function AppLayout() {
               <>
                 <PracticeSection />
                 <PopularTestSeries />
+                <Growth/>
                 <Footer />
               </>
             }
